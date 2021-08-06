@@ -1,4 +1,4 @@
-
+import { routeGuard } from '../auth'
 const routes = [
   {
     path: '/',
@@ -9,6 +9,7 @@ const routes = [
   },
   {
     path: '/dashboard',
+    beforeEnter: routeGuard,
     component: () => import('layouts/MainLayout.vue'),
     children: [
       { path: '', component: () => import('pages/Dashboard.vue') }
