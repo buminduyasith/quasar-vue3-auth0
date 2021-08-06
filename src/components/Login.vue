@@ -53,14 +53,14 @@ export default defineComponent({
 
     // console.log(auth);
 
-    // onBeforeMount(() => {
-    //   if (auth.isAuthenticated.value) {
-    //     router.push("/dashboard");
-    //   } else {
-    //   }
+    onBeforeMount(() => {
+      if (auth.isAuthenticated.value) {
+        router.push("/dashboard");
+      } else {
+      }
 
-    //   //  router.push("/dashboard");
-    // });
+      //  router.push("/dashboard");
+    });
 
     function login() {
       auth.loginWithRedirect();
@@ -68,7 +68,7 @@ export default defineComponent({
 
     function logout() {
       auth.logout({
-        returnTo: "http://localhost:8080/tax-return",
+        returnTo: "http://localhost:8080",
       });
     }
 
