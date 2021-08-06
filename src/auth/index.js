@@ -118,18 +118,17 @@ export const setupAuth = async (options, callbackRedirect) => {
             // handle the redirect and retrieve tokens
             const { appState } = await client.handleRedirectCallback()
 
+            //console.log("bumindu",appState);
             // console.log("appstate", appState);
-            // -----------------  this from auth0 forum --------------------------------
 
-            // For anyone else re-using Lucas’s code above (thanks a ton @lstyles, your repo is literally the only example I found online for vue3), if you’re having trouble with redirects working correctly you need to add this line:
+            // if you’re having trouble with redirects working correctly you need to add this line:
 
             // state.error = null;
             // after this line:
 
             // const {appState} = await client.handleRedirectCallback()
-            // in Lucas’s index.js file.
+            // in index.js file.
 
-            // I spent more time than I’ll ever acknowledge learning this:)
 
             // state.error = null;
 
